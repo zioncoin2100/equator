@@ -1,10 +1,10 @@
 package equator
 
-func initZionCoreInfo(app *App) {
-	app.UpdateZionCoreInfo()
+func initZioncoreInfo(app *App) {
+	app.UpdateZioncoreInfo()
 	return
 }
 
 func init() {
-	appInit.Add("zionCoreInfo", initZionCoreInfo, "app-context", "log")
+	appInit.Add("ZioncoreInfo", initZioncoreInfo, "app-context", "log")
 }

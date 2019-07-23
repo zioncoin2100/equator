@@ -20,7 +20,7 @@ func initEquatorDb(app *App) {
 }
 
 func initCoreDb(app *App) {
-	session, err := db.Open("postgres", app.config.ZionCoreDatabaseURL)
+	session, err := db.Open("postgres", app.config.ZioncoreDatabaseURL)
 
 	if err != nil {
 		log.Panic(err)

@@ -22,5 +22,5 @@ func initFriendbot(app *App) {
 }
 
 func init() {
-	appInit.Add("friendbot", initFriendbot, "txsub", "zionCoreInfo")
+	appInit.Add("friendbot", initFriendbot, "txsub", "ZioncoreInfo")
 }

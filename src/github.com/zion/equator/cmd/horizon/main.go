@@ -210,8 +210,8 @@ func initConfig() {
 
 	config = equator.Config{
 		DatabaseURL:            viper.GetString("db-url"),
-		ZionCoreDatabaseURL: viper.GetString("zion-core-db-url"),
-		ZionCoreURL:         viper.GetString("zion-core-url"),
+		ZioncoreDatabaseURL: viper.GetString("zion-core-db-url"),
+		ZioncoreURL:         viper.GetString("zion-core-url"),
 		Port:                   viper.GetInt("port"),
 		RateLimit:              throttled.PerHour(viper.GetInt("per-hour-rate-limit")),
 		RedisURL:               viper.GetString("redis-url"),

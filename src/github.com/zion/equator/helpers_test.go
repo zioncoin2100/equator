@@ -24,7 +24,7 @@ func NewTestApp() *App {
 func NewTestConfig() Config {
 	return Config{
 		DatabaseURL:            test.DatabaseURL(),
-		ZionCoreDatabaseURL: test.ZionCoreDatabaseURL(),
+		ZioncoreDatabaseURL: test.ZioncoreDatabaseURL(),
 		RateLimit:              throttled.PerHour(1000),
 		LogLevel:               hlog.InfoLevel,
 	}

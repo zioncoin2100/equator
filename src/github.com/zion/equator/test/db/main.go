@@ -22,9 +22,9 @@ const (
 	// equator's test database.
 	DefaultEquatorURL = "postgres://localhost:5432/equator_test?sslmode=disable"
 
-	// DefaultZionCoreURL is the default postgres connection string
+	// DefaultZioncoreURL is the default postgres connection string
 	// for equator's test zion core database.
-	DefaultZionCoreURL = "postgres://localhost:5432/zion-core_test?sslmode=disable"
+	DefaultZioncoreURL = "postgres://localhost:5432/zion-core_test?sslmode=disable"
 )
 
 // Equator returns a connection to the equator test database
@@ -59,22 +59,22 @@ func OpenDatabase(dsn string) *sqlx.DB {
 	return db
 }
 
-// ZionCore returns a connection to the zion core test database
-func ZionCore() *sqlx.DB {
+// Zioncore returns a connection to the zion core test database
+func Zioncore() *sqlx.DB {
 	if coreDB != nil {
 		return coreDB
 	}
-	coreDB = OpenDatabase(ZionCoreURL())
+	coreDB = OpenDatabase(ZioncoreURL())
 	return coreDB
 }
 
-// ZionCoreURL returns the database connection the url any test
+// ZioncoreURL returns the database connection the url any test
 // use when connecting to the zion-core database
-func ZionCoreURL() string {
+func ZioncoreURL() string {
 	databaseURL := os.Getenv("ZION_CORE_DATABASE_URL")
 
 	if databaseURL == "" {
-		databaseURL = DefaultZionCoreURL
+		databaseURL = DefaultZioncoreURL
 	}
 
 	return databaseURL

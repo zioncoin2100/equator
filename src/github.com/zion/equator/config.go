@@ -9,8 +9,8 @@ import (
 // app's main function and is provided to NewApp.
 type Config struct {
 	DatabaseURL            string
-	ZionCoreDatabaseURL string
-	ZionCoreURL         string
+	ZioncoreDatabaseURL string
+	ZioncoreURL         string
 	Port                   int
 	RateLimit              throttled.Quota
 	RedisURL               string

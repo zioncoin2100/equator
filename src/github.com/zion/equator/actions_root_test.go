@@ -22,7 +22,7 @@ func TestRootAction(t *testing.T) {
 	defer server.Close()
 
 	ht.App.equatorVersion = "test-equator"
-	ht.App.config.ZionCoreURL = server.URL
+	ht.App.config.ZioncoreURL = server.URL
 
 	w := ht.Get("/")
 	if ht.Assert.Equal(200, w.Code) {
@@ -30,6 +30,6 @@ func TestRootAction(t *testing.T) {
 		err := json.Unmarshal(w.Body.Bytes(), &actual)
 		ht.Require.NoError(err)
 		ht.Assert.Equal("test-equator", actual.EquatorVersion)
-		ht.Assert.Equal("test-core", actual.ZionCoreVersion)
+		ht.Assert.Equal("test-core", actual.ZioncoreVersion)
 	}
 }

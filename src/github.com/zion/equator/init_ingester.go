@@ -17,7 +17,7 @@ func initIngester(app *App) {
 
 	app.ingester = ingest.New(
 		app.networkPassphrase,
-		app.config.ZionCoreURL,
+		app.config.ZioncoreURL,
 		app.CoreSession(nil),
 		app.EquatorSession(nil),
 	)
@@ -26,5 +26,5 @@ func initIngester(app *App) {
 }
 
 func init() {
-	appInit.Add("ingester", initIngester, "app-context", "log", "equator-db", "core-db", "zionCoreInfo")
+	appInit.Add("ingester", initIngester, "app-context", "log", "equator-db", "core-db", "ZioncoreInfo")
 }

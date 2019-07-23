@@ -168,7 +168,7 @@ type Root struct {
 	} `json:"_links"`
 
 	EquatorVersion       string `json:"equator_version"`
-	ZionCoreVersion   string `json:"core_version"`
+	ZioncoreVersion   string `json:"core_version"`
 	EquatorSequence      int32  `json:"history_latest_ledger"`
 	HistoryElderSequence int32  `json:"history_elder_ledger"`
 	CoreSequence         int32  `json:"core_latest_ledger"`

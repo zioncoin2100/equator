@@ -15,7 +15,7 @@ func initSubmissionSystem(app *App) {
 
 	app.submitter = &txsub.System{
 		Pending:         txsub.NewDefaultSubmissionList(),
-		Submitter:       txsub.NewDefaultSubmitter(http.DefaultClient, app.config.ZionCoreURL),
+		Submitter:       txsub.NewDefaultSubmitter(http.DefaultClient, app.config.ZioncoreURL),
 		SubmissionQueue: sequence.NewManager(),
 		Results: &results.DB{
 			Core:    cq,

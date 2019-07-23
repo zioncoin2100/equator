@@ -127,26 +127,26 @@ func Start(t *testing.T) *T {
 
 	result.Ctx = hlog.Set(context.Background(), result.Logger)
 	result.EquatorDB = Database()
-	result.CoreDB = ZionCoreDatabase()
+	result.CoreDB = ZioncoreDatabase()
 	result.Assert = assert.New(t)
 	result.Require = require.New(t)
 
 	return result
 }
 
-// ZionCoreDatabase returns a connection to the zion core test database
+// ZioncoreDatabase returns a connection to the zion core test database
 //
-// DEPRECATED:  use `ZionCore()` from test/db package
-func ZionCoreDatabase() *sqlx.DB {
-	return tdb.ZionCore()
+// DEPRECATED:  use `Zioncore()` from test/db package
+func ZioncoreDatabase() *sqlx.DB {
+	return tdb.Zioncore()
 }
 
-// ZionCoreDatabaseURL returns the database connection the url any test
+// ZioncoreDatabaseURL returns the database connection the url any test
 // use when connecting to the zion-core database
 //
-// DEPRECATED:  use `ZionCoreURL()` from test/db package
-func ZionCoreDatabaseURL() string {
-	return tdb.ZionCoreURL()
+// DEPRECATED:  use `ZioncoreURL()` from test/db package
+func ZioncoreDatabaseURL() string {
+	return tdb.ZioncoreURL()
 }
 
 var oldDefault *hlog.Entry = nil

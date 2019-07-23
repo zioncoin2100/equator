@@ -80,9 +80,9 @@ type System struct {
 	// Network is the passphrase for the network being imported
 	Network string
 
-	// ZionCoreURL is the http endpoint of the zion-core that data is being
+	// ZioncoreURL is the http endpoint of the zion-core that data is being
 	// ingested from.
-	ZionCoreURL string
+	ZioncoreURL string
 
 	// SkipCursorUpdate causes the ingestor to skip
 	// reporting the "last imported ledger" cursor to
@@ -124,9 +124,9 @@ type Session struct {
 	// Network is the passphrase for the network being imported
 	Network string
 
-	// ZionCoreURL is the http endpoint of the zion-core that data is being
+	// ZioncoreURL is the http endpoint of the zion-core that data is being
 	// ingested from.
-	ZionCoreURL string
+	ZioncoreURL string
 
 	// ClearExisting causes the session to clear existing data from the equator db
 	// when the session is run.
@@ -157,7 +157,7 @@ type Session struct {
 func New(network string, coreURL string, core, equator *db.Session) *System {
 	i := &System{
 		Network:        network,
-		ZionCoreURL: coreURL,
+		ZioncoreURL: coreURL,
 		EquatorDB:      equator,
 		CoreDB:         core,
 	}
@@ -184,7 +184,7 @@ func NewSession(first, last int32, i *System) *Session {
 			Metrics:     &i.Metrics,
 		},
 		Network:          i.Network,
-		ZionCoreURL:   i.ZionCoreURL,
+		ZioncoreURL:   i.ZioncoreURL,
 		SkipCursorUpdate: i.SkipCursorUpdate,
 		Metrics:          &i.Metrics,
 	}

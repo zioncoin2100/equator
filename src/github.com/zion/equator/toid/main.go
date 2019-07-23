@@ -4,7 +4,6 @@ import (
 	"fmt"
 )
 
-//
 // ID represents the total order of Ledgers, Transactions and
 // Operations.
 //

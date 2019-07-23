@@ -172,7 +172,7 @@ func ingestSystem() *ingest.System {
 		log.Fatal(err)
 	}
 
-	cdb, err := db.Open("postgres", config.ZionCoreDatabaseURL)
+	cdb, err := db.Open("postgres", config.ZioncoreDatabaseURL)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -182,7 +182,7 @@ func ingestSystem() *ingest.System {
 		log.Fatal("network-passphrase is blank: reingestion requires manually setting passphrase")
 	}
 
-	i := ingest.New(passphrase, config.ZionCoreURL, cdb, hdb)
+	i := ingest.New(passphrase, config.ZioncoreURL, cdb, hdb)
 	return i
 }
 

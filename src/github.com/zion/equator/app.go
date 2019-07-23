@@ -202,10 +202,10 @@ Failed:
 
 }
 
-// UpdateZionCoreInfo updates the value of coreVersion and networkPassphrase
+// UpdateZioncoreInfo updates the value of coreVersion and networkPassphrase
 // from the Zion core API.
-func (a *App) UpdateZionCoreInfo() {
-	if a.config.ZionCoreURL == "" {
+func (a *App) UpdateZioncoreInfo() {
+	if a.config.ZioncoreURL == "" {
 		return
 	}
 
@@ -213,7 +213,7 @@ func (a *App) UpdateZionCoreInfo() {
 		log.Warnf("could not load zion-core info: %s", err)
 	}
 
-	resp, err := http.Get(fmt.Sprint(a.config.ZionCoreURL, "/info"))
+	resp, err := http.Get(fmt.Sprint(a.config.ZioncoreURL, "/info"))
 
 	if err != nil {
 		fail(err)
@@ -275,7 +275,7 @@ func (a *App) Tick() {
 	// update ledger state and zion-core info in parallel
 	wg.Add(2)
 	go func() { a.UpdateLedgerState(); wg.Done() }()
-	go func() { a.UpdateZionCoreInfo(); wg.Done() }()
+	go func() { a.UpdateZioncoreInfo(); wg.Done() }()
 	wg.Wait()
 
 	if a.ingester != nil {

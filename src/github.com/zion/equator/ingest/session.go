@@ -744,7 +744,7 @@ func (is *Session) operationFlagDetails(result map[string]interface{}, f int32, 
 func (is *Session) reportCursorState() error {
 	// TODO(scott): with the introduction of
 	// SkipCursorUpdate, this should probably be removed.
-	if is.ZionCoreURL == "" {
+	if is.ZioncoreURL == "" {
 		return nil
 	}
 
@@ -752,7 +752,7 @@ func (is *Session) reportCursorState() error {
 		return nil
 	}
 
-	u, err := url.Parse(is.ZionCoreURL)
+	u, err := url.Parse(is.ZioncoreURL)
 	if err != nil {
 		return err
 	}

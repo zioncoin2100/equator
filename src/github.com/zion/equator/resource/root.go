@@ -20,7 +20,7 @@ func (res *Root) Populate(
 	res.CoreSequence = ledgerState.CoreLatest
 	res.CoreElderSequence = ledgerState.CoreElder
 	res.EquatorVersion = hVersion
-	res.ZionCoreVersion = cVersion
+	res.ZioncoreVersion = cVersion
 	res.NetworkPassphrase = passphrase
 	res.ProtocolVersion = pVersion
 
