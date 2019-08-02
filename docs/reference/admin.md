@@ -6,7 +6,7 @@ Equator is responsible for providing an HTTP API to data in the Zion network. It
 
 ## Why run equator?
 
-The zion development foundation runs two equator servers, one for the public network and one for the test network, free for anyone's use at https://equator.zion.org and https://equator-testnet.zion.org.  These servers should be fine for development and small scale projects, but is not recommended that you use them for production services that need strong reliability.  By running equator within your own infrastructure provides a number of benefits:
+The zion development foundation runs two equator servers, one for the public network and one for the test network, free for anyone's use at https://zionc.info and https://zionc.info.  These servers should be fine for development and small scale projects, but is not recommended that you use them for production services that need strong reliability.  By running equator within your own infrastructure provides a number of benefits:
 
   - Multiple instances can be run for redundancy and scalability.
   - Request rate limiting can be disabled.
@@ -127,7 +127,7 @@ To ensure that your instance of equator is performing correctly we encourage you
 
 Equator will output logs to standard out.  Information about what requests are coming in will be reported, but more importantly and warnings or errors will also be emitted by default.  A correctly running equator instance will not ouput any warning or error log entries.
 
-Metrics are collected while a equator process is running and they are exposed at the `/metrics` path.  You can see an example at (https://equator-testnet.zion.org/metrics).
+Metrics are collected while a equator process is running and they are exposed at the `/metrics` path.  You can see an example at (https://zionc.info/metrics).
 
 ## I'm Stuck! Help!
 
